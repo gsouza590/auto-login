@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-
 from utils import modulo_login
 from utils import modulo_transacao_pagina
 from utils import modulo_tela_horario
