@@ -45,7 +45,7 @@ def tela_horario(navegador):
         if eventos == 'desporte':
             campos_desabilitados = ['horaAtvHora', 'horaAtvMinuto', 'horaAtvHora2', 'horaAtvMinuto2']
             for campo in campos_desabilitados:
-                janela[campo].update(disabled=valores['desporte'])
+                janela[campo].update(disabled= not valores['desporte'])
 
         if eventos == 'aleat':
             aleatorio = True
@@ -194,21 +194,24 @@ def registra_tabela_ocorrencia(navegador, horaAtividadeIni, horaAtividadeFim):
 # Realizar ajustes no horario para não recair em horário britanico.
 
 def calcular_hora_aleatoria(hora_base, minrandom):
-    hora_aleatoria = int(hora_base)
-    if minrandom < 0:
-        hora_aleatoria -= abs(minrandom)
-    else:
-        hora_aleatoria += abs(minrandom)
+    try:
+        hora_aleatoria = int(hora_base)
+        if minrandom < 0:
+            hora_aleatoria -= abs(minrandom)
+        else:
+            hora_aleatoria += abs(minrandom)
 
-    horas = hora_aleatoria // 100
-    minutos = hora_aleatoria % 100
-    minutos_corrigidos = max(0, min(59, minutos))
-    hora_datetime = datetime.datetime.now().replace(hour=horas, minute=minutos_corrigidos, second=0, microsecond=0)
-    hora_datetime -= datetime.timedelta(minutes=abs(minrandom))
-    hora_aleatoria = (hora_datetime.hour * 100) + hora_datetime.minute
+        horas = hora_aleatoria // 100
+        minutos = hora_aleatoria % 100
+        minutos_corrigidos = max(0, min(59, minutos))
+        hora_datetime = datetime.datetime.now().replace(hour=horas, minute=minutos_corrigidos, second=0, microsecond=0)
+        hora_datetime -= datetime.timedelta(minutes=abs(minrandom))
+        hora_aleatoria = (hora_datetime.hour * 100) + hora_datetime.minute
 
-    hora_aleatoria = str(hora_aleatoria).zfill(4)  # Adiciona zeros à esquerda, se necessário
-    return hora_aleatoria
+        hora_aleatoria = str(hora_aleatoria).zfill(4)  # Adiciona zeros à esquerda, se necessário
+        return hora_aleatoria
+    except ValueError:
+        pass
 
 
 def gerar_horarios_aleatorios(hora1, hora2, hora3=None, hora4=None):
