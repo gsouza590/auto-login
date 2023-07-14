@@ -51,7 +51,7 @@ def tela_horario(navegador):
             aleatorio = True
 
         if eventos == 'Horários Personalizados':
-            modulo_tela_dia_personalizado.dia_personalizacao()
+            modulo_tela_dia_personalizado.dia_personalizacao(navegador)
             break
 
         if eventos == 'Confirmar':
