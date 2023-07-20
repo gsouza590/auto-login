@@ -1,6 +1,5 @@
 import time
 
-
 def transicao_paginas(navegador):
     time.sleep(3)
     navegador.get("https://projetos.dpf.gov.br/siseg/principal.php")

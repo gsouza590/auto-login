@@ -13,7 +13,6 @@ def tela_login(navegador):
     layout = [
         [sg.Text('Usuario'), sg.Input(key='usuario', size=(40, 10))],
         [sg.Text('Senha  '), sg.Input(key='senha', password_char='*', size=(40, 10))],
-
         [sg.Button('Entrar')]
     ]
 
