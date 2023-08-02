@@ -1,8 +1,6 @@
 
 import PySimpleGUI as sg
-
 from utils.modulo_preenchimento import preenchimento_horario_manual, preenchimento_horario_manual_personalizado
-
 
 def dia_personalizacao(navegador):
     # Defina o layout da janela de registros

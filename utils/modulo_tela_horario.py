@@ -1,9 +1,6 @@
-
 from PySimpleGUI import PySimpleGUI as sg
 from utils import modulo_tela_dia_personalizado
-from utils.modulo_preenchimento import preenchimento_horario_ocorrencia, registra_tabela_manual, \
-    gerar_horarios_aleatorios, preenchimento_horario_manual
-
+from utils.modulo_preenchimento import preenchimento_horario_ocorrencia, preenchimento_horario_manual
 
 def tela_horario(navegador):
     # Layout

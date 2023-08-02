@@ -15,6 +15,7 @@ def espera_elemento_visivel(navegador, by, value, timeout=10):
     )
 
 
+
 def espera_elemento_clicavel(navegador, by, value, timeout=10):
     return WebDriverWait(navegador, timeout).until(
         EC.element_to_be_clickable((by, value))
@@ -75,6 +76,7 @@ def registra_tabela_manual(navegador, horaEntrada, horaSaida):
         print("Botão 'Registro Manual de Frequência' não está visível na página")
 
     time.sleep(3)
+
     campo_inicio = navegador.find_element(By.XPATH, '//*[@id="formInclusao:registrosInclusao:0:j_id606"]/input')
     ActionChains(navegador).send_keys_to_element(campo_inicio, Keys.BACKSPACE * 4).perform()
     campo_inicio.send_keys(horaEntrada)
