@@ -25,7 +25,7 @@ Para executar o projeto, é necessário ter o Python instalado no computador, ju
 1. Clone este repositório para o seu computador:
 
 ```bash
-git clone https://github.com/seu-usuario/automacao-registro-horarios.git
+git clone https://github.com/gsouza590/auto-login.git
 ```
 
 2. Instale as dependências necessárias:
