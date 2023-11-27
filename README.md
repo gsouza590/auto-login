@@ -1,40 +1,42 @@
-# E-commerce
+# Projeto de Automação para Registro de Horários
 ![NPM](https://img.shields.io/npm/l/react)
 
 ## Sobre
-Este projeto de código-fonte exemplifica uma aplicação de e-commerce desenvolvida em Java, utilizando o framework Spring Boot. A finalidade principal é apresentar a implementação de funcionalidades comuns em sistemas de comércio eletrônico, incluindo a adição de itens ao carrinho de compras, o processamento de pedidos e a interação com um banco de dados. Além disso, foram adicionados controllers e funcionalidades de front-end com Thymeleaf. Para o front-end, foram empregados dois templates prontos para conectar-se ao backend: https://themewagon.com.
+Este projeto de automação foi desenvolvido para facilitar o processo de registro de horários em um sistema web específico. O projeto foi desenvolvido utilizando Python e a biblioteca Selenium para interagir com o navegador e automatizar as ações.
 
-## Tecnologias Utilizadas
+## Funcionalidades
 
-1. **Java**
-2. **Spring Boot**
-3. **Hibernate**
-4. **MySQL**
-5. **Maven**
-6. **ThymeLeaf**
+O projeto possui as seguintes funcionalidades:
 
-   
-## Funcionalidades:
+1. **Registro Manual de Horários:** Permite o registro manual de horários de entrada e saída em um sistema web.
 
-1. **Adicionar itens ao carrinho de compras**
-2. **Atualizar o carrinho de compras**
-3. **Remover itens do carrinho de compras**
-4. **Processar pedidos**
-5. **Visualizar detalhes do pedido**
-6. **CRUD Consumidor e Administrador**
+2. **Registro de Ocorrências:** Permite o registro de ocorrências de prática desportiva em um sistema web.
 
+3. **Geração de Horários Aleatórios:** Permite a geração de horários aleatórios para os registros de horários e ocorrências.
 
-## EER
-Modelo de dados utilizado em bancos de dados para representar visualmente as relações entre entidades. 
-   ![image](https://github.com/gsouza590/auto-login/assets/72672156/77720c08-21e1-42cc-a988-8cb505bb9af7)
+4. **Personalização de Horários:** Permite a personalização dos registros de horários, incluindo a possibilidade de registrar ocorrências desportivas.
+
+## Configuração do Ambiente
+
+Para executar o projeto, é necessário ter o Python instalado no computador, juntamente com a biblioteca Selenium. Além disso, é necessário ter o navegador Google Chrome instalado e o driver correspondente (ChromeDriver) adicionado ao PATH do sistema.
 
 ## Como Utilizar
 
-1. Clone o repositório para a sua máquina local.
-2. Importe o projeto em uma IDE Java de sua preferência.
-3. Configure as dependências do projeto usando o Maven.
-4. Execute a aplicação a partir da classe principal `EcommerceApplication`.
-5. Acesse a aplicação em `http://localhost:8080`.
+1. Clone este repositório para o seu computador:
+
+```bash
+git clone https://github.com/seu-usuario/automacao-registro-horarios.git
+```
+
+2. Instale as dependências necessárias:
+```bash
+pip install selenium
+```
+
+3. Instale as dependências necessárias
+```bash
+python main.py
+```
 
 ## Contato
 Se tiver alguma dúvida ou sugestão, entre em contato
@@ -42,5 +44,3 @@ Se tiver alguma dúvida ou sugestão, entre em contato
 email: gsouza590@gmail.com
 
 linkedin: https://www.linkedin.com/in/gabrielsdomiciano/
-
-
